@@ -4,6 +4,6 @@
 
 ## 使用
 
-1. 下载[发行包](https://github.com/lsby/sync_play_client/releases)
+1. 下载[发行包](https://github.com/lsby/sync_play_service/releases)
 2. 修改`run.bat`里的参数
 3. 运行`run.bat`
