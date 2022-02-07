@@ -60,8 +60,9 @@ exports.setWsOnGoto = (ws) => (back) => () => {
 exports.addId = (ws) => () => {
   return new Promise((res, rej) => {
     var uuid = require("uuid");
-    ws.id = uuid.v4();
-    res();
+    var r = Object.create(ws);
+    r.id = uuid.v4();
+    res(r);
   });
 };
 
@@ -81,5 +82,10 @@ exports.delLink = (ws) => () => {
   return new Promise((res, rej) => {
     arr = arr.filter((a) => a.id != ws.id);
     res();
+  });
+};
+exports.getLinkNum = () => {
+  return new Promise((res, rej) => {
+    res(arr.length);
   });
 };

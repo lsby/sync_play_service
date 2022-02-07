@@ -18,7 +18,7 @@ foreign import setWsOnGoto :: WSHand -> (Time -> Task Unit) -> Task Unit
 
 foreign import setWsOnDisConn :: WSHand -> (WSHand -> Task Unit) -> Task Unit
 
-foreign import addId :: WSHand -> Task Unit
+foreign import addId :: WSHand -> Task WSHand
 
 -- link
 foreign import getAllLink :: Task (Array WSHand)
@@ -26,3 +26,5 @@ foreign import getAllLink :: Task (Array WSHand)
 foreign import addLink :: WSHand -> Task Unit
 
 foreign import delLink :: WSHand -> Task Unit
+
+foreign import getLinkNum :: Task Int
