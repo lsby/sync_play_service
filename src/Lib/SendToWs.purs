@@ -7,10 +7,10 @@ import Hby.Task (Task)
 import Lib.Data (WSHand, Time)
 import Lib.Index (getAllLink)
 
-type RowObj
+type RawObj
   = { cmd :: String, data :: Time }
 
-foreign import _sendToWs :: WSHand -> RowObj -> Task Unit
+foreign import _sendToWs :: WSHand -> RawObj -> Task Unit
 
 data Cmd
   = PlayCmd
